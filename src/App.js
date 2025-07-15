@@ -1,7 +1,7 @@
+import BasicStateManagement from './components/BasicStateManagement'
+
 function App() {
-  return (
-    null
-  );
+  return <BasicStateManagement></BasicStateManagement>
 }
 
-export default App;
+export default App
