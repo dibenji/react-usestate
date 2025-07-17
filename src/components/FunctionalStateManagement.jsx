@@ -19,10 +19,23 @@ const FunctionalStateManagement = () => {
     const handleReset = () => setCount(0); 
 
     return (
-      <h2>Functional state management using useState</h2>
-      // same code as in Basic state manamgenet example
+      <div>
+        <h1>Functional state management using useState</h1>
+        <p>
+          Count: <output>{count}</output>
+        </p>
+        <button type="button" onClick={handleDecrement}>
+          Decrement
+        </button>
+        <button type="button" onClick={handleIncrement}>
+          Increment
+        </button>
+        <button type="button" onClick={handleReset}>
+          Reset          
+        </button>
+      </div>
     );
-  }
+  };
   `.trim();
 
   return (

@@ -103,7 +103,6 @@ const ObjectStateManagement = () => {
           onChange={(e) => handleInputChange('lastName', e.target.value)}
           className="form-input"
         />
-
         <div className="user-display">
           <p>
             <strong>Firstname:</strong> {user.firstName}

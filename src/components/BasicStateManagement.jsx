@@ -35,7 +35,7 @@ const BasicStateManagement = () => {
         </button>
       </div>
     );
-  }
+  };
   `.trim();
 
   return (
