@@ -1,7 +1,13 @@
-import BasicStateManagement from './components/BasicStateManagement'
+import BasicStateManagement from './components/BasicStateManagement';
+import FunctionalStateManagement from './components/FunctionalStateManagement';
 
 function App() {
-  return <BasicStateManagement></BasicStateManagement>
+  return (
+    <div>
+      <BasicStateManagement></BasicStateManagement>
+      <FunctionalStateManagement></FunctionalStateManagement>
+    </div>
+  );
 }
 
-export default App
+export default App;
