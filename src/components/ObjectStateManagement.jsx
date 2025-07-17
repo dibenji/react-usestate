@@ -56,31 +56,33 @@ const ObjectStateManagement = () => {
     };
 
     return (
-      <h1>Object state management using useState</h1>
-      <input
-        type="text"
-        placeholder="Firstname"
-        value={user.firstName}
-        onChange={(e) => handleInputChange('firstName', e.target.value)}
-      />
-      <input
-        type="test"
-        placeholder="Lastname"
-        value={user.lastName}
-        onChange={(e) => handleInputChange('lastName', e.target.value)}
-      />
-      <p>
-        <strong>Firstname:</strong> {user.firstName}
-      </p>
-      <p>
-        <strong>Lastname:</strong> {user.lastName}
-      </p>
-      <button onClick={handleWrongUpdate} className="btn">
-        Update (wrong)
-      </button>
-      <button onClick={handleCorrectUpdate} className="btn">
-        Update (correct)
-      </button>
+      <div>
+        <h1>Object state management using useState</h1>
+        <input
+          type="text"
+          placeholder="Firstname"
+          value={user.firstName}
+          onChange={(e) => handleInputChange('firstName', e.target.value)}
+        />
+        <input
+          type="test"
+          placeholder="Lastname"
+          value={user.lastName}
+          onChange={(e) => handleInputChange('lastName', e.target.value)}
+        />
+        <p>
+          <strong>Firstname:</strong> {user.firstName}
+        </p>
+        <p>
+          <strong>Lastname:</strong> {user.lastName}
+        </p>
+        <button onClick={handleWrongUpdate} className="btn">
+          Update (wrong)
+        </button>
+        <button onClick={handleCorrectUpdate} className="btn">
+          Update (correct)
+        </button>
+      </div>
     );
   };
   `.trim();
