@@ -19,15 +19,15 @@ const FunctionalVsBasicStateManagement = () => {
   };
 
   const handleMultipleDecrementFunctional = () => {
-    setCount((previousValue) => previousValue - 1);
-    setCount((previousValue) => previousValue - 1);
-    setCount((previousValue) => previousValue - 1);
+    setCount((prevValue) => prevValue - 1);
+    setCount((prevValue) => prevValue - 1);
+    setCount((prevValue) => prevValue - 1);
   };
 
   const handleMultipleIncrementFunctional = () => {
-    setCount((previousValue) => previousValue + 1);
-    setCount((previousValue) => previousValue + 1);
-    setCount((previousValue) => previousValue + 1);
+    setCount((prevValue) => prevValue + 1);
+    setCount((prevValue) => prevValue + 1);
+    setCount((prevValue) => prevValue + 1);
   };
 
   const handleReset = () => setCount(0);
@@ -51,17 +51,17 @@ const FunctionalVsBasicStateManagement = () => {
     };
 
     const handleMultipleDecrementFunctional = () => {
-      // correct way - previousValue changes within handleMultipleDecrementFunctional
-      setCount((previousValue) => previousValue - 1);
-      setCount((previousValue) => previousValue - 1);
-      setCount((previousValue) => previousValue - 1);
+      // correct way - prevValue changes within handleMultipleDecrementFunctional
+      setCount((prevValue) => prevValue - 1);
+      setCount((prevValue) => prevValue - 1);
+      setCount((prevValue) => prevValue - 1);
     };
 
     const handleMultipleIncrementFunctional = () => {
-      // correct way - previousValue changes within handleMultipleIncrementFunctional
-      setCount((previousValue) => previousValue + 1);
-      setCount((previousValue) => previousValue + 1);
-      setCount((previousValue) => previousValue + 1);
+      // correct way - prevValue changes within handleMultipleIncrementFunctional
+      setCount((prevValue) => prevValue + 1);
+      setCount((prevValue) => prevValue + 1);
+      setCount((prevValue) => prevValue + 1);
     };
 
     const handleReset = () => setCount(0);
@@ -127,7 +127,7 @@ const FunctionalVsBasicStateManagement = () => {
             onClick={handleMultipleIncrementFunctional}
             className="btn btn-primary"
           >
-            Increment +3 (correct)
+            Increment (correct)
           </button>
           <button type="button" onClick={handleReset} className="btn">
             Reset

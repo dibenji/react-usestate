@@ -5,10 +5,8 @@
 
 .container {
   display: flex;
-  gap: 20px;
   margin: 20px;
   padding: 20px;
-  font-size: 1.8rem;
   background-color: var(--bg-light);
   border: 1px solid var(--border-light);
   border-radius: 8px;
@@ -18,12 +16,16 @@
 }
 
 .left-sub-container {
+  flex: 1;
+  max-width: 50%;
   display: flex;
   flex-direction: column;
   /* align-items: flex-start; */
 }
 
 .right-sub-container {
+  flex: 1;
+  max-width: 50%;
   display: flex;
   position: relative;
   /* justify-content: flex-end; */
@@ -42,7 +44,6 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 2rem;
   transition: background-color 0.2s ease-in-out;
 }
 
@@ -59,5 +60,13 @@
 }
 
 .syntax-highlighter {
+  min-width: 100%;
   max-height: 100vh;
+}
+
+.form-input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 20%;
 }
