@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import './Components.css';
 
 const FunctionalStateManagement = () => {
   const [count, setCount] = useState(0);
@@ -13,26 +14,13 @@ const FunctionalStateManagement = () => {
   const Counter = () => {
     const [count, setCount] = useState(0);
     
-    const handleDecrement = () => setCount((previousValue) => previousValue - 1);
-    const handleIncrement = () => setCount((previousValue) => previousValue + 1);
+    const handleDecrement = () => setCount(previousValue => previousValue - 1);
+    const handleIncrement = () => setCount(previousValue => previousValue + 1);
     const handleReset = () => setCount(0); 
 
     return (
-      <h2>Basic state management using useState</h2>
-      <p>
-        Count: <output>{count}</output>
-      </p>
-      <div>
-        <button type="button" onClick={handleDecrement}>
-          Decrement
-        </button>
-        <button type="button" onClick={handleIncrement}>
-          Increment
-        </button>
-        <button type="button" onClick={handleReset}>
-          Reset          
-        </button>
-      </div>
+      <h2>Functional state management using useState</h2>
+      // same code as in Basic state manamgenet example
     );
   }
   `.trim();
