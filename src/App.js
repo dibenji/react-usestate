@@ -2,6 +2,7 @@ import BasicStateManagement from './components/BasicStateManagement';
 import FunctionalStateManagement from './components/FunctionalStateManagement';
 import FunctionalVsBasicStateManagement from './components/FunctionalVsBasicStateManagement';
 import ArrayStateManagement from './components/ArrayStateManagement';
+import ObjectStateManagement from './components/ObjectStateManagement';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <FunctionalStateManagement></FunctionalStateManagement>
       <FunctionalVsBasicStateManagement></FunctionalVsBasicStateManagement>
       <ArrayStateManagement></ArrayStateManagement>
+      <ObjectStateManagement></ObjectStateManagement>
     </div>
   );
 }
