@@ -9,18 +9,20 @@ const ArrayStateManagement = () => {
 
   const addTodoCorrect = () => {
     if (inputValue.trim()) {
+      console.log(todos);
       setTodos((previousArray) => [
         ...previousArray,
         { id: Date.now(), text: inputValue, completed: false },
       ]);
-      setInputValue('');
     }
+    setInputValue('');
   };
 
   const addTodoWrong = () => {
     if (inputValue.trim()) {
       todos.push({ id: Date.now(), text: inputValue, completed: false });
       setTodos(todos);
+      console.log(todos);
     }
   };
 
@@ -71,9 +73,40 @@ const ArrayStateManagement = () => {
     };
 
     return (
-    
-    )
-  }
+      <div>
+        <h1>Array state management using useState</h1>
+        <input
+          type="text"
+          placeholder="Add a todo..."
+          onChange={(e) => setInputValue(e.target.value)}
+          onKeyUp={(e) => e.key === 'Enter' && addTodoCorrect()}
+        />
+        <button onClick={addTodoWrong}>
+          Add (wrong)
+        </button>
+        <button onClick={addTodoCorrect}>
+          Add (correct)
+        </button>
+        {todos.map((todo) => (
+          <div key={todo.id}>
+            <input
+              type="checkbox"
+              checked={todo.completed}
+              onChange={() => toggleTodo(todo.id)}
+            />
+            <span>
+              {todo.text}
+            </span>
+            <button
+              onClick={() => removeTodo(todo.id)}
+            >
+              Remove
+            </button>
+          </div>
+        ))}
+      </div>
+    );
+  };
   `.trim();
 
   return (
@@ -83,6 +116,7 @@ const ArrayStateManagement = () => {
         <input
           type="text"
           placeholder="Add a todo..."
+          value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyUp={(e) => e.key === 'Enter' && addTodoCorrect()}
           className="form-input"
@@ -108,7 +142,7 @@ const ArrayStateManagement = () => {
               </span>
               <button
                 onClick={() => removeTodo(todo.id)}
-                className="btn btn-danger btn-small"
+                className="btn btn-small"
               >
                 Remove
               </button>
