@@ -19,15 +19,15 @@ const FunctionalVsBasicStateManagement = () => {
   };
 
   const handleMultipleDecrementFunctional = () => {
-    setCount((prevValue) => prevValue - 1);
-    setCount((prevValue) => prevValue - 1);
-    setCount((prevValue) => prevValue - 1);
+    setCount((previousValue) => previousValue - 1);
+    setCount((previousValue) => previousValue - 1);
+    setCount((previousValue) => previousValue - 1);
   };
 
   const handleMultipleIncrementFunctional = () => {
-    setCount((prevValue) => prevValue + 1);
-    setCount((prevValue) => prevValue + 1);
-    setCount((prevValue) => prevValue + 1);
+    setCount((previousValue) => previousValue + 1);
+    setCount((previousValue) => previousValue + 1);
+    setCount((previousValue) => previousValue + 1);
   };
 
   const handleReset = () => setCount(0);
@@ -51,17 +51,17 @@ const FunctionalVsBasicStateManagement = () => {
     };
 
     const handleMultipleDecrementFunctional = () => {
-      // correct way - prevValue changes within handleMultipleDecrementFunctional
-      setCount((prevValue) => prevValue - 1);
-      setCount((prevValue) => prevValue - 1);
-      setCount((prevValue) => prevValue - 1);
+      // correct way - previousValue changes within handleMultipleDecrementFunctional
+      setCount((previousValue) => previousValue - 1);
+      setCount((previousValue) => previousValue - 1);
+      setCount((previousValue) => previousValue - 1);
     };
 
     const handleMultipleIncrementFunctional = () => {
-      // correct way - prevValue changes within handleMultipleIncrementFunctional
-      setCount((prevValue) => prevValue + 1);
-      setCount((prevValue) => prevValue + 1);
-      setCount((prevValue) => prevValue + 1);
+      // correct way - previousValue changes within handleMultipleIncrementFunctional
+      setCount((previousValue) => previousValue + 1);
+      setCount((previousValue) => previousValue + 1);
+      setCount((previousValue) => previousValue + 1);
     };
 
     const handleReset = () => setCount(0);
