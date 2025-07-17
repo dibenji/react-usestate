@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import './Components.css';
 
 const ArrayStateManagement = () => {
@@ -119,7 +119,7 @@ const ArrayStateManagement = () => {
       <div className="right-sub-container">
         <SyntaxHighlighter
           language="jsx"
-          style={oneDark}
+          style={oneLight}
           showLineNumbers="true"
           className="syntax-highlighter"
         >
