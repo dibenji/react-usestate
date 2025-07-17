@@ -19,15 +19,15 @@ const FunctionalVsBasicStateManagement = () => {
   };
 
   const handleMultipleDecrementFunctional = () => {
-    setCount((prevValue) => prevValue - 1);
-    setCount((prevValue) => prevValue - 1);
-    setCount((prevValue) => prevValue - 1);
+    setCount((previousValue) => previousValue - 1);
+    setCount((previousValue) => previousValue - 1);
+    setCount((previousValue) => previousValue - 1);
   };
 
   const handleMultipleIncrementFunctional = () => {
-    setCount((prevValue) => prevValue + 1);
-    setCount((prevValue) => prevValue + 1);
-    setCount((prevValue) => prevValue + 1);
+    setCount((previousValue) => previousValue + 1);
+    setCount((previousValue) => previousValue + 1);
+    setCount((previousValue) => previousValue + 1);
   };
 
   const handleReset = () => setCount(0);
@@ -51,27 +51,27 @@ const FunctionalVsBasicStateManagement = () => {
     };
 
     const handleMultipleDecrementFunctional = () => {
-      // correct way - prevValue changes within handleMultipleDecrementFunctional
-      setCount((prevValue) => prevValue - 1);
-      setCount((prevValue) => prevValue - 1);
-      setCount((prevValue) => prevValue - 1);
+      // correct way - previousValue changes within handleMultipleDecrementFunctional
+      setCount((previousValue) => previousValue - 1);
+      setCount((previousValue) => previousValue - 1);
+      setCount((previousValue) => previousValue - 1);
     };
 
     const handleMultipleIncrementFunctional = () => {
-      // correct way - prevValue changes within handleMultipleIncrementFunctional
-      setCount((prevValue) => prevValue + 1);
-      setCount((prevValue) => prevValue + 1);
-      setCount((prevValue) => prevValue + 1);
+      // correct way - previousValue changes within handleMultipleIncrementFunctional
+      setCount((previousValue) => previousValue + 1);
+      setCount((previousValue) => previousValue + 1);
+      setCount((previousValue) => previousValue + 1);
     };
 
     const handleReset = () => setCount(0);
 
     return (
-      <h2>Basic state management using useState</h2>
-      <p>
-        Count: <output>{count}</output>
-      </p>
       <div>
+        <h1>Basic state management using useState</h1>
+        <p>
+          Count: <output>{count}</output>
+        </p>
         <button type="button" onClick={handleMultipleDecrementBasic}>
           Decrement -3 (wrong)
         </button>
@@ -89,8 +89,7 @@ const FunctionalVsBasicStateManagement = () => {
         </button>
       </div>
     );
-
-  }
+  };
   `.trim();
 
   return (
@@ -111,14 +110,14 @@ const FunctionalVsBasicStateManagement = () => {
           <button
             type="button"
             onClick={handleMultipleIncrementBasic}
-            className="btn btn-primary"
+            className="btn btn-secondary"
           >
             Increment +3 (wrong)
           </button>
           <button
             type="button"
             onClick={handleMultipleDecrementFunctional}
-            className="btn btn-secondary"
+            className="btn btn-primary"
           >
             Decrement -3 (correct)
           </button>
@@ -143,9 +142,6 @@ const FunctionalVsBasicStateManagement = () => {
         >
           {jsxSnippet}
         </SyntaxHighlighter>
-        <pre>
-          <code></code>
-        </pre>
       </div>
     </section>
   );

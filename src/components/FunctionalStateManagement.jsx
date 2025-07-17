@@ -46,18 +46,10 @@ const FunctionalStateManagement = () => {
           Count: <output>{count}</output>
         </p>
         <div className="button-group">
-          <button
-            type="button"
-            onClick={handleDecrement}
-            className="btn btn-secondary"
-          >
+          <button type="button" onClick={handleDecrement} className="btn">
             Decrement
           </button>
-          <button
-            type="button"
-            onClick={handleIncrement}
-            className="btn btn-primary"
-          >
+          <button type="button" onClick={handleIncrement} className="btn">
             Increment
           </button>
           <button type="button" onClick={handleReset} className="btn">
@@ -74,9 +66,6 @@ const FunctionalStateManagement = () => {
         >
           {jsxSnippet}
         </SyntaxHighlighter>
-        <pre>
-          <code></code>
-        </pre>
       </div>
     </section>
   );
